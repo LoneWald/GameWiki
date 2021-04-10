@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameWiki.RegisterSucces"
+             BackgroundColor= "Black">
+    <ContentPage.Content>
+        <StackLayout Margin="20" Orientation="Vertical" VerticalOptions="CenterAndExpand" BackgroundColor= "Black" HorizontalOptions="Center">
+            <Label Text="Ты теперь с нами!" BackgroundColor="Black" TextColor="White" FontSize="25" HorizontalOptions="CenterAndExpand"  Padding="0, 50"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace GameWiki
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DashPage : ContentPage
+    public partial class LoginSucces : ContentPage
     {
-        public DashPage()
+        public LoginSucces()
         {
             InitializeComponent();
         }
