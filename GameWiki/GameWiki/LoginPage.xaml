@@ -11,6 +11,7 @@
             <Button x:Name="LoginButton" Clicked="LoginClick" Text="Sing in" BackgroundColor="Gray" TextColor="Black" Margin="30" CornerRadius="5" ></Button>
             <Label Text="В первый раз?" BackgroundColor="Black" TextColor="White" FontSize="25" HorizontalOptions="CenterAndExpand" Padding="0, 50, 0, 0"></Label>
             <Button x:Name="RegistrationButton" Clicked="GoToRegisterPageClick" Text="Sing up" BackgroundColor="Gray" TextColor="Black" Margin="30" CornerRadius="5"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

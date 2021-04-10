@@ -1,4 +1,5 @@
-﻿using GameWiki.Servises;
+﻿using Android.Widget;
+using GameWiki.Servises;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,22 +21,32 @@ namespace GameWiki
 
         async void LoginClick(Object sender, EventArgs e)
         {
-            var accountApiServises = new AccountApiServises();
-            var content = await accountApiServises.AuthenticateUserAsync(LoginForm.Text, PasswordForm.Text);
-
-            if (content != null)
+            if (LoginForm.Text == null || PasswordForm.Text == null)
             {
-                await Navigation.PushAsync(new LoginSucces());
+                var toastmessage = "Need to fill everything";
+                DependencyService.Get<ToastMessage>().ShortTime(toastmessage);
             }
             else
             {
+                var accountApiServises = new AccountApiServises();
+                var content = await accountApiServises.AuthenticateUserAsync(LoginForm.Text, PasswordForm.Text);
 
+                if (content != null)
+                {
+                    await Navigation.PushAsync(new LoginSucces());
+                }
+                else
+                {
+                    var toastmessage = "Not Found";
+                    DependencyService.Get<ToastMessage>().ShortTime(toastmessage);
+                }
             }
+
         }
 
         async void GoToRegisterPageClick(Object sender, EventArgs e)
         {
-                await Navigation.PushAsync(new RegisterPage());
+            await Navigation.PushAsync(new RegisterPage());
         }
     }
 }

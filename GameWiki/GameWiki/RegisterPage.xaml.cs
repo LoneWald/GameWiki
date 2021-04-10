@@ -20,16 +20,25 @@ namespace GameWiki
 
         async void RegisterClick(Object sender, EventArgs e)
         {
-            var accountApiServises = new AccountApiServises();
-            var content = await accountApiServises.RegisterUserAsync(EmailForm.Text, LoginForm.Text, PasswordForm.Text, NicknameForm.Text);
-
-            if (content != null)
+            if (EmailForm.Text == null || LoginForm.Text == null || PasswordForm.Text == null || NicknameForm.Text == null)
             {
-                await Navigation.PushAsync(new RegisterSucces());
+                var toastmessage = "Need to fill everything";
+                DependencyService.Get<ToastMessage>().ShortTime(toastmessage);
             }
             else
             {
+                var accountApiServises = new AccountApiServises();
+                var content = await accountApiServises.RegisterUserAsync(EmailForm.Text, LoginForm.Text, PasswordForm.Text, NicknameForm.Text);
 
+                if (content != null)
+                {
+                    await Navigation.PushAsync(new RegisterSucces());
+                }
+                else
+                {
+                    var toastmessage = "Failed to create";
+                    DependencyService.Get<ToastMessage>().ShortTime(toastmessage);
+                }
             }
         }
     }
