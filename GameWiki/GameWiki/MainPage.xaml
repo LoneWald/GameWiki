@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameWiki.MainPage">
+
+    <StackLayout Margin="20" Orientation="Vertical" VerticalOptions="CenterAndExpand">
+        <Entry x:Name="EmailForm" Placeholder="Email"></Entry>
+        <Entry x:Name="LoginForm" Placeholder="Login"></Entry>
+        <Entry x:Name="PasswordForm" Placeholder="Password"></Entry>
+        <Entry x:Name="NicknameForm" Placeholder="Nickname"></Entry>
+        <Button x:Name="RegisterButton" Clicked="RegisterClick" Text="Register" BackgroundColor="Black" TextColor="White" Margin="30"></Button>
+        <Button x:Name="LoginButton" Clicked="SingInClick" Text="Sing in" BackgroundColor="Black" TextColor="White" Margin="30"></Button>
+        <Label x:Name="label_123" Text="Пока - нет"></Label>
+    </StackLayout>
+
+</ContentPage>
