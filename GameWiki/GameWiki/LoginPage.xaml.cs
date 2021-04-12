@@ -1,4 +1,7 @@
 ﻿using Android.Widget;
+using GameWiki.Models.Users;
+using GameWiki.Models.Login;
+using GameWiki.Models.Register;
 using GameWiki.Servises;
 using System;
 using System.Collections.Generic;
@@ -33,6 +36,7 @@ namespace GameWiki
 
                 if (content != null)
                 {
+                    new CurrentUser(content);
                     await Navigation.PushAsync(new LoginSucces());
                 }
                 else

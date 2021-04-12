@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameWiki.Models.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,14 @@ namespace GameWiki
         public LoginSucces()
         {
             InitializeComponent();
+            try
+            {
+                Info_label.Text = "С возвращением, " + CurrentUser.ThisUser.nickname;
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameWiki.Models.Login
 {
-    class LoginApiResponceModel
+    public class LoginApiResponseModel
     {
 
         public int id { get; set; }
@@ -12,7 +12,7 @@ namespace GameWiki.Models.Login
         public string login { get; set; }
         public string password { get; set; }
         public string nickname { get; set; }
-        public string isModerator { get; set; }
+        public bool isModerator { get; set; }
         public List<string> characters { get; set; }
 
     }

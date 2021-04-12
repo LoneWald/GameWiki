@@ -1,10 +1,11 @@
-﻿using GameWiki.Servises;
+﻿using GameWiki.Models.Users;
+using GameWiki.Servises;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using GameWiki.Models.Register;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,6 +33,7 @@ namespace GameWiki
 
                 if (content != null)
                 {
+                    new CurrentUser(content);
                     await Navigation.PushAsync(new RegisterSucces());
                 }
                 else

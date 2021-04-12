@@ -5,7 +5,7 @@
              BackgroundColor= "Black">
     <ContentPage.Content>
         <StackLayout Margin="20" Orientation="Vertical" VerticalOptions="CenterAndExpand" BackgroundColor= "Black" HorizontalOptions="Center">
-            <Label Text="Ты теперь с нами!" BackgroundColor="Black" TextColor="White" FontSize="25" HorizontalOptions="CenterAndExpand"  Padding="0, 50"></Label>
+            <Label x:Name="Info_label" Text="Не видишь ник? - Проблема!" BackgroundColor="Black" TextColor="White" FontSize="25" HorizontalOptions="CenterAndExpand"  Padding="0, 50"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
